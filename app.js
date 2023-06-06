@@ -54,6 +54,6 @@ app.get("/posts/:postName", function(req, res){
     })
 })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {  // process.env.PORT  this is a dynamic port for heroku  and by 3000 our app will work both on heroku and localy
   console.log("Server started on port 3000");
 });
